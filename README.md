@@ -4,7 +4,7 @@ Este projeto é um site institucional que desenvolvi para um amigo, com o objeti
 
 Funcionalidades do site:
 
-Quem Somos: Informações sobre o profissional e sua experiência.
+Quem Somos: Informações sobre o profissional e sua experiência. </br>
 Serviços: Descrição detalhada dos serviços de BPO e gestão financeira oferecidos.
 Clientes: Testemunhos e exemplos de clientes atendidos.
 Blog: Artigos e atualizações sobre tópicos relevantes.
