@@ -12,6 +12,6 @@
 
 <p>Este projeto foi uma excelente oportunidade para aplicar e expandir meus conhecimentos em design web, desenvolvimento front-end e back-end, e SEO.</p>
 
-![01_Site_TN_Home](https://github.com/Caio-Moraes159/Site-institucional/assets/110501020/a3b36102-fa39-4949-815d-39930a8fc1a6)
+![01_Site_TN_Home](https://github.com/user-attachments/assets/9313bd78-c1de-4eeb-99e5-b0375ee9e060)
 
 <p>Acesse e veja o site por esse link a seguir: https://tngestao.com.br/</p>
