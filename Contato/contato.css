@@ -1,0 +1,966 @@
+@font-face {
+    font-family: 'Arboria-Medium';
+    src: url('../fontes/Arboria-Medium.otf') format('opentype'),
+         url('../fontes/Arboria-Medium.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Arboria-Book';
+    src: url('../fontes/Arboria-Book.otf') format('opentype'),
+         url('../fontes/Arboria-Book.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Arboria-Bold';
+    src: url('../fontes/Arboria-Bold.otf') format('opentype'),
+         url('../fontes/Arboria-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Arboria-Black';
+    src: url('../fontes/Arboria-Black.otf') format('opentype'),
+         url('../fontes/Arboria-Black.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+:root {
+    -color-white: #fff;
+    -color-gray: #f1f2f3;
+    -color-gray2: #dadbdf;
+    -color-green: #cacf3d;
+    -color-blue1: #11162c;
+    -color-blue2: #11152b;
+    -color-blue3: #090f27;
+    -color-text: #22273c;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background:#fff;
+    color: #22273c;
+}
+
+html {
+    font-family: 'Arboria-Medium', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* Estilizando o Header, barra de navegação superior */
+.nav_head {
+    width: 90%;
+    max-width: 1120px;
+    margin: auto;
+    padding: 1.5rem 1.5rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu_head {
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+    gap: 3rem;
+    text-decoration: none;
+}
+
+.text_head {
+    color: #11162c;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.25rem;
+    text-decoration: none;
+    transition: 100ms;
+}
+
+.img_logo {
+    height: auto;
+    width: 180%;
+}
+
+.ancora_img {
+    width: 10rem;
+}
+
+.text_head:hover {
+    border-bottom: 0.2rem solid #dadbdf;
+}
+/* Final da estilização do Header */
+
+
+
+/* Estilizando o Hero, parte principal da pagina */
+.section_hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 0.2rem solid #fff;
+}
+
+.div_hero {
+    background-color: #090f27;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding-left: 14%;
+    width: 46.875vw;
+    height: 24.10vh;
+    text-transform: uppercase;
+}
+
+.div_vazia {
+    background-color: #cacf3d;
+    width: 61.458vw;
+    height: 24.10vh;
+}
+
+.text_hero {
+    border-left: 0.5rem solid #cacf3d;
+    font-family: 'Arboria-Book', sans-serif;
+    text-indent: 2.2rem;
+    font-size: 1.3rem;
+    letter-spacing: 1rem;
+    line-height: 80px;
+    font-weight: 200;
+}
+
+.section_vazia {
+    background-image: url(../img/img_back_contato.png);
+    background-repeat: no-repeat;
+    background-size: cover; /* Ajusta a imagem para cobrir todo o container */
+    background-position: center center; /* Centraliza a imagem no container */
+    width: 100%; /* Garante que o container ocupe 100% da largura disponível */
+    height: 44.98vh; /* Mantém a altura que você definiu */
+}
+/* Final do hero */
+
+
+
+/* ------------------------ Estilizando o contato form ----------------------- */ 
+.section_form1 {
+    display: flex;
+    min-height: 73vh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.div_form2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.5rem;
+}
+
+.div_input1 {
+    margin-bottom: 3rem;
+}
+
+.div_input2 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.2rem;
+    row-gap: 1rem;
+}
+
+.input_div {
+    position: relative;
+    font-size: 1.25rem;
+    width: 26.04vw;
+    height: 41.64vh;
+    background: #ededed;
+    border-radius: 15px;
+}
+
+.input {
+    width: 26.04vw;
+    height: 41.64vh;
+    text-indent: 10px;
+    box-sizing: border-box;
+    resize: none;
+    color: #11162c;
+    background: #ededed;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 0.3rem solid #ededed;
+    transition: 150ms;
+    font-size: 18px;
+}
+
+.label {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: #11162c9a;
+    pointer-events: none;
+    transition: 150ms;
+}
+
+.input:is(:focus, :valid) ~ label {
+    transform: 
+    translateY(-120%)
+    scale(0.7);
+    background-color: #ffffff;
+    padding-inline: 0.3rem;
+    color: #11162cd3;
+}
+
+.input_div_small {
+    position: relative;
+    font-size: 1.25rem;
+    width: 25rem;
+    height: 3.6rem;
+    background: #ededed;
+    border-radius: 15px;
+}
+
+.input_small {
+    width: 25rem;
+    height: 3.6rem;
+    text-indent: 10px;
+    box-sizing: border-box;
+    color: #11162c;
+    background: #ededed;
+    padding: 0.6rem;
+    border-radius: 10px;
+    border: 0.3rem solid #ededed;
+    transition: 150ms;
+    font-size: 18px;
+}
+
+.input_small:is(:focus, :valid) ~ label {
+    transform: 
+    translateY(-120%)
+    scale(0.7);
+    background-color: #ffffff;
+    padding-inline: 0.3rem;
+    color: #11162cd3;
+}
+/* ------------------------ Final do forms ------------------------ */
+
+
+/* Button */
+.div_button{
+    display: flex;
+    justify-content: end;
+}
+
+.enviar_button {
+    font-family: "Arboria-Medium";
+    font-size: 25px;
+    color: #ededed;
+    background-color: #22273c;
+    width: 11rem;
+    height: 3rem;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.4s;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.enviar_button:hover {
+    opacity: 0.9;
+}
+
+.enviar_button:active {
+    transform: scale(0.9);
+}
+/* Final do contato */
+
+
+/* Estilizando o footer*/
+.section_info {
+    background: #cacf3d;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 10.95vh;
+}
+
+.div_contato  {
+    display: flex;
+    align-items: center;
+}
+
+.div_zap {
+    display: flex;
+    align-items: end;
+    height: 4.38vh;
+}
+
+.logo_zap {
+    width: 2rem;
+    height: 2rem;
+}
+
+.div_ddd {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 4.38vh;
+}
+
+.ddd {
+    margin: 0 0.5rem 0 0.5rem;
+    font-size: 1rem;
+    letter-spacing: 0.063rem;
+    /* line-height: 1.5rem; */
+    font-weight: 500;
+    
+}
+
+.div_number {
+    display: flex;
+    align-items: end;
+    height: 4.38vh;
+}
+
+.number {
+    white-space: nowrap;
+    font-size: 1.5rem;
+    letter-spacing: 0.063rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    column-gap: 0.7rem;
+    width: auto;
+}
+
+.logo_face,
+.logo_linkedin,
+.logo_instagram {
+    width: 32px;
+    height: 32px;
+    transition: all 0.4s;
+}
+
+.e-mail {
+    color:#11162c;
+    text-decoration: none;
+    transition: all 0.7s;
+}
+
+.logo_face:hover,
+.logo_linkedin:hover,
+.logo_instagram:hover {
+    opacity: 0.85;
+}
+
+.e-mail:hover {
+    border-bottom: 1px solid #11162caf;
+}
+
+.link_footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2rem;
+    width: 100%;
+    height: 10.95vh;
+}
+
+.text_link {
+    color: #11162c;
+    font-size: 0.813rem;
+    line-height: 2.5rem;
+    font-weight: 500;   
+    transition: 0.3s; 
+}
+
+.text_link:hover {
+    font-size: 1rem;
+}
+/* Final do footer */
+
+
+
+/* ===== BreakPoint ====== */
+@media (max-width: 1189px) {
+    /* html {
+        font-size: 85%;
+    } */
+}
+
+@media (max-width: 1025px) {
+    html {
+        /* font-size: 80%; */
+    }
+
+    /* Estiliando os texto e img */
+    .section_vazia  {
+        background-size: 84rem;
+        height: 33vh;
+    }
+    /* Final */
+
+
+
+    /* Estilizando o form */
+
+    /* Final */
+
+
+
+    /* Footer colocar nas outras paginas */
+    .div_contato {
+        padding-bottom:  8px;
+    }
+
+    .logo_face,
+    .logo_instagram,
+    .logo_linkedin {
+        width: 25px;
+        height: 25px;
+    }
+    /* Final do footer */
+    
+
+
+    /* Titulo da página */
+    .div_vazia,
+    .div_hero {
+        height: 20vh;
+    }
+    /* FInal do titulo da página */
+}
+
+/* Copiar e colar */
+@media (max-width: 940px) {
+    .div_hero {
+        width: 60vw;
+    }
+}
+
+@media (max-width: 920px) {
+    html {
+        font-size: 75%;
+    }
+
+    .section_info {
+        height: 9vh;
+    }
+}
+
+/* Copiar e colar nas outras paginas de CSS, menu hamburguer */
+@media (max-width: 900px) {
+
+    /* 
+    Jogar esse menu responsivo em todas os js de todas as paginas,
+    pq todas as paginas precisam desse menu, é algo generico.
+         ===== Menu responsivo - Tipo Hamburguer ===== 
+     */
+     .nav {
+        display: none;
+        z-index: 9;
+    }
+
+    .one,
+    .two,
+    .three {
+        background-color: #11162c;
+        height: 4px;
+        width: 100%;
+        margin: 5px auto;
+        border-radius: 3px;
+
+        transition-duration: .3s;
+    }
+
+    .menu-toggle {
+        width: 40px;
+        height: 30px;
+        margin-right: 20px;
+    }
+
+    /* Fullscreen */
+    .menu-section.on {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100vw;
+        height: 100vh;
+        background-color: #cacf3d;
+        z-index: 9;
+    }
+
+    .menu-section.on .menu-toggle {
+        position: absolute;
+        right: 0;
+        top: 15px;
+    }
+
+    .menu-section.on .menu-toggle .one {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+
+    .menu-section.on .menu-toggle .two {
+        opacity: 0;
+    }
+
+    .menu-section.on .menu-toggle .three {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    .nav ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 2rem;
+        row-gap: 3rem;
+    }
+
+    .nav {
+        height: 70vh;
+    }
+    .nav ul li {
+        width: 100%;
+    }
+
+    .text_head {
+        font-size: 1.2rem;
+        transition-duration: .5s;
+        line-height: 4rem;
+        display: block;
+    }
+
+    .text_head:hover {
+        background-color: #dadbdf79;
+        border: none;
+    }
+
+    .nav_head {
+        flex-direction: row;
+        width: 100%;
+    }
+    /* ===== final do menu responsivo Hamburguer ===== */
+}
+
+@media (max-width: 769px) {
+    /* Estilizando img_vazia */
+    .section_vazia {
+        background-size: 70rem;
+        height: 30vh;
+    }
+    /* Final da img_vaiza */
+
+
+
+    /* Estiliando img_back */
+    .div_vazia,
+    .div_hero {
+        height: 19vh;
+    }
+
+    .div_hero {
+        padding-left: 10%;
+    }
+
+    .text_hero {
+        line-height: 60px;
+    }
+    /* Final da img */
+
+
+
+    /* Estilizando form */
+    .input_div_small,
+    .input_small {
+        width: 21rem;
+    }
+
+    .input_small {
+        font-size: 1.3rem;
+    }
+
+    .input_div,
+    .input {
+        width: 30vw;
+        height: 41.64vh;
+    }
+
+    .input {
+        font-size: 1.3rem;
+    }
+
+    .enviar_button {
+        font-size: 1.5rem;
+    }
+    /* Final */
+
+
+
+    /* logo do footer */
+    .logo_face,
+    .logo_instagram,
+    .logo_linkedin {
+        width: 25px;
+        height: 25px;
+    }
+    /* Final do footer */
+}
+
+/* Copiar e colar */
+@media (max-width: 660px) {
+    /* caixa do titulo principal */
+    .div_hero {
+        width: 80vw;
+    }
+    /* FInal da caixa do titulo */
+}
+
+@media (max-width: 630px) {
+    /* Estilizando o footer, jogar para as outras paginas do site */
+    .e-mail {
+        font-size: 90%;
+    }
+
+    .section_info {
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 0.5rem;
+        height: 12.95vh;
+    }
+
+    .number {
+        font-size: 1.3rem;
+    }
+
+    .ddd {
+        font-size: 0.9rem;
+    }
+
+    .logo_zap {
+        width: 1.7rem;
+        height: 1.7rem;
+    }
+
+    .logo_face,
+    .logo_instagram,
+    .logo_linkedin {
+        width: 20px;
+        height: 20px;
+    }
+
+    .link_footer {
+        height: 9.95vh;
+    }
+
+    /* Header */
+    .one, .two, .three {
+        width: 80%;
+    }
+    /* Final do footer e header, jogar essa estilização para os outras paginas */
+}
+
+/* Copiar e colar */
+@media (max-width: 590px) {
+    /* Estilizando img_vazia */
+    .section_vazia {
+        background-size: 60rem;
+        height: 24vh;
+    }
+    /* Final da img_vaiza */
+}
+
+/* Copiar e colar */
+@media (max-width: 520px) {
+    /* Estilizando img_vazia */
+    .section_vazia {
+        background-size: 50rem;
+        height: 21vh;
+    }
+    /* Final da img_vaiza */
+
+
+
+    /* Estilizando caixa do titulo */
+    .div_hero,
+    .div_vazia {
+        height: 15vh;
+    }
+    /* Final da caixa */
+}
+
+/* Copiar e colar */
+@media (max-width: 490px) {
+    .div_hero {
+        width: 95vw;
+    }
+}
+
+@media (max-width: 426px) {
+    /* Estilizando o footer, jogar para as outras paginas do site */
+    .e-mail {
+        font-size: 90%;
+    }
+
+    .section_info {
+        flex-direction: column;
+    }
+
+    .number {
+        font-size: 1.3rem;
+    }
+
+    .ddd {
+        font-size: 0.9rem;
+    }
+
+    .logo_zap {
+        width: 1.7rem;
+        height: 1.7rem;
+    }
+
+    .logo_face,
+    .logo_instagram,
+    .logo_linkedin {
+        width: 20px;
+        height: 20px;
+    }
+
+    .link_footer {
+        height: 9.95vh;
+    }
+
+    /* Header */
+    .one, .two, .three {
+        width: 80%;
+    }
+    /* Final do footer e header, jogar essa estilização para os outras paginas */
+
+
+
+    /* Estiliando img_back */
+    .section_vazia {
+        background-size: 50rem;
+        height: 139px;
+        background-position: -143px 0px;
+    }
+
+    .div_vazia,
+    .div_hero {
+        height: 16vh;
+    }
+
+    .div_hero {
+        padding-left: 8%;
+        width: 83vw;
+    }
+
+    .text_hero {
+        font-size: 1rem;
+        line-height: 35px;
+        text-indent: 1.1rem;
+        letter-spacing: 0.7rem;
+    }
+    /* Final da img */
+
+
+
+    /* Estilizando form */
+    .div_form2 {
+        row-gap:  1.5rem;
+    }
+
+    .input_div_small,
+    .input_small {
+        width: 15rem;
+        height: 3rem;
+    }
+    
+    .input_div,
+    .input {
+        width: 39vw;
+        height: 33.64vh;
+    }
+
+    .input,
+    .input_small {
+        font-size: 1rem;
+    }
+
+    .label {
+        font-size: 1rem;
+    }
+
+    .section_form1 {
+        min-height: 60vh;
+        gap: 0.5rem;
+    }
+
+    .enviar_button {
+        font-size: 1.2rem;
+        height: 5vh;
+        width: 23vw;
+    }
+}
+
+@media (max-width: 376px) {
+    /* Header */
+    .img_logo {
+        content: url(../img/logo_T.png);
+        width: 35px;
+        height: 35px;
+        margin-left: 10px;
+    }
+    /* Final do header */
+
+
+
+    /* Estiliando img_back */
+    .section_vazia {
+        background-size: 48rem;
+        height: 133px;
+        background-position: -151px 0px;
+    }
+
+    .div_vazia,
+    .div_hero {
+        height: 13vh;
+    }
+
+    .div_hero {
+        padding-left: 7%;
+        width: 90vw;
+    }
+
+    .text_hero {
+        font-size: 0.94rem;
+        letter-spacing: 0.5rem;
+    }
+    /* Final da img */
+
+
+
+    /* Estilizando form */
+    .div_form2 {
+        row-gap:  1.2rem;
+    }
+
+    .input_div_small,
+    .input_small {
+        width: 14rem;
+    }
+    
+    .input_div,
+    .input {
+        width: 40vw;
+        height: 31vh;
+    }
+
+    .input,
+    .input_small {
+        font-size: 0.9rem;
+    }
+
+    .label {
+        font-size: 0.9rem;
+    }
+
+    .section_form1 {
+        min-height: 57vh;
+        gap: 0.8rem;
+    }
+}
+
+@media (max-width: 320px) {
+    /* Alterando o tamanho do footer, jogar para outras paginas */
+    .text_link {
+        font-size: 0.7rem;
+    }
+
+    .link_footer {
+        column-gap: 1.5rem;
+    }
+    /* Final do footer */
+
+
+
+    /* Estilizando img */
+    .section_vazia {
+        background-size: 35rem;
+        background-position: -69px 0px;
+        height: 95px;
+    }
+
+    .text_hero {
+        font-size: 0.8rem;
+    }
+
+    .div_hero,
+    .div_vazia {
+        height: 10vh;
+    }
+    /* Final da img */
+
+
+
+    /* Estilizando form */
+    .div_form2 {
+        row-gap: 1rem;
+    }
+
+    .input_div_small,
+    .input_small {
+        width: 12rem;
+    }
+    
+    .input_div,
+    .input {
+        width: 39vw;
+        height: 29.64vh;
+    }
+
+    .input,
+    .input_small {
+        font-size: 0.8rem;
+    }
+
+    .label {
+        font-size: 0.8rem;
+    }
+
+    .section_form1 {
+        min-height: 55vh;
+    }
+
+    .enviar_button {
+        font-size: 1rem;
+        height: 4vh;
+        width: 22vw;
+    }
+}
